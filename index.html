@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
+    <meta name="description" 
+    content="This is an example of a meta description. This will often show up in search results.">
+    <link rel="stylesheet" href="index.css">
+    <title>Ad With Us</title>
+  </head>
+  <body>
+    <!-- day and night button -->
+    <div class="position-fixed top end-0 bg_light py-2 shadow-sm bg_dark_max hide_1000">
+      <div class="sun_moon text-center pt-2"><img class="h_w moon_img" src="./assets/sun.png" alt="sun"></div>
+      <div class="fw_600 c_white mt-2 text_chng">Day Mode</div>
+      <div class="slide w-75 mt-3 mx-auto c_p bg_dark_maxi" onclick="bg_dark_mode()">
+        <div class="round shadow" id="tl"></div>
+      </div>
+    </div>
+    <!-- absolute image -->
+    <nav class="navbar shadow-sm navbar-expand-lg navbar-light bg_dark_nav bg_white navi border-bottom py-0 position-fixed top-0 start-0 end-0 z_index">
+      <div class="container-fluid px-2">
+        <a class="navbar-brand" href="#" title="brand name"><img class="d-block h_w" src="./assets/Logo.png" alt="our brand"></a>
+        <a href="#" title="Dark and light mode"> 
+        <img class="h_w show_sun moon_img" onclick="bg_dark_mode()" src="./assets/sun.png" alt="sun">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <div class="d-flex">
+            <div class="nav-item mx-2"><a class="fw_600 anchor c_white" href="#" title="All tools" onclick="show_tools()">All Tools <img src="./assets/drop_chevron.svg" alt="dropdown"></a></div>
+            <div class="nav-item mx-2"><a class="fw_600 anchor c_white" href="blog_bs_done.html" title="Blog">Blog</a></div>
+            <div class="nav-item mx-2"><a class="fw_600 anchor c_white" href="ad_with_us_bootstrap.html" title="title">Dashboard</a></div>
+            <div class="nav-item mx-2"><a class="fw_600 anchor c_white" href="aboutUsPage_bs.html" title="title">About us</a></div>
+          </div>
+          <div class="position-relative m-0 justify-content-end d-flex search_div mx-1 hide_1000">
+            <input class="py-3 w-100 inp rounded-0 border-0 hide_1000 bg_light bg_dark_inp c_white" type="text" placeholder="Enter a word to search..">
+            <a class="hide_1000" href="#"><img class="position-absolute top_right hide_1000" src="./assets/search.svg" alt="search"></a>
+          </div>
+          <a class="mx-2 hide_1000" href="#"><img src="./assets/Shape 1.png" alt="bell"></a>
+          <a class="mx-2 hide_1000" href="#"><img src="./assets/Group 1198.png" alt="user"></a>
+          <div><button class="p-2 rounded bg_light bg_dark_inp c_white b_none border_1 fw_600 hide_1000" type="button">ENGLISH <img src="./assets/global.png" alt="global"></button></div>
+        </div>
+      </div>
+    </nav>
+    <!-- search bar shown in mobile view -->
+    <div class="bg_light pt-5 w-100 d-flex justify-content-center hide_start bg_dark_fluid">
+      <input class="py-3 mobile_search rounded-0 w-75 hide_start mt-3 shadow-sm bg_dark_mbl border-0 bg_white" type="text" placeholder="Enter a word to search from this site...."><span class="shadow-sm bg-primary mt-3 py-3 px-3 hide_start"><img class="mx-1 hide_start" src="./assets/search.svg" alt="search"></span>
+    </div>
+    <!-- main section -->
+    <div class="container-fluid bg_light bg_dark_fluid pt-md-4">
+      <div class="container">
+        <div class="row justify-content-center pt-3">
+          <div class="col-md-6"><img class="shadow w-100" src="./assets/ads.png" alt="our ad"></div>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <div class="col-lg-9 text-center fw_600 border py-2 fs-5 bg_white bg_dark_max c_white">AD WITH US</div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-9 border bg_white">
+            <div class="row">
+              <div class="col-lg-6 p-4 bg_white bg_dark_max"><img class="img_res" src="./assets/Group 3667.png" alt="picture"></div>
+              <div class="col-lg-6 bg_white bg_dark_max">
+                <div class="text-center fw_600 fs-5 mt-4 c_white">WE ARE AL NEED TO REACH YOUR AUDIENCE</div>
+                <div class="text-center fw_600 fs-6 mt-5 px-4 c_white">Small SEO Tools is the leading and the most reliable source for free SEO tools on the
+                  Hundreds of users use out site every day at any
+                  given moment. Thus, we can help you with the
+                  best and most effective advertising solutions.
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 bg_white bg_dark_max">
+                <div class="text-center fw_600 fs-5 mt-4 c_white">EFFECTIVE AND UNIQUE ADVERTISING PLATFORM</div>
+                <div class="text-center fw_600 fs-6 mt-5 px-4 c_white">Small SEO Tools is the leading and the most
+                  reliable source for free SEO tools on the
+                  Hundreds of users use out site every day at any
+                  given moment. Thus, we can help you with the
+                  best and most effective advertising solutions.
+                </div>
+                <div class="text-center fw_600 fs-6 mt-5 px-4 c_white">Small SEO Tools is the leading and the most
+                  reliable source for free SEO tools on the
+                  Hundreds of users use out site every day at any
+                  given moment. Thus, we can help you with the
+                  best and most effective advertising solutions.
+                </div>
+              </div>
+              <div class="col-lg-6 p-4 hw bg_white bg_dark_max"><img class="img_res" src="./assets/blue-ad-img.png" alt="picture"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="text-center fw_600 py-2 fs-5 mt-2 c_white t_shad">WHY ADVERTISE WITH US?</div>
+            <div class="text-center px-4 c_white t_shad">We are the first and most authentic site targeted to people looking for accessible SEO solutions.</div>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <div class="col-lg-9 border pt-3 bg_white bg_dark_max">
+            <div class="text-center c_white fw_600 py-2 fs-5 d-flex justify-content-center align-items-center">
+              <div class="line_1 w-25 mx-2"></div>
+              Be Seen 
+              <div class="line_2 w-25 mx-2"></div>
+            </div>
+            <div class="text-center c_white px-4 mt-3">By putting your ad on our platform, you are getting an assurance that hundreds of the users benefiting from our tool are seeing your ad. The more the people see your ad, the better reponse you get!</div>
+            <div class="text-center c_white fw_600 py-2 fs-5 d-flex justify-content-center align-items-center mt-4">
+              <div class="line_1 w-25 mx-2"></div>
+              Stay Relevent 
+              <div class="line_2 w-25 mx-2"></div>
+            </div>
+            <div class="text-center c_white px-4 mt-3">We making advertising easy for you! Our designing team can create ads for you that are - beautiful, to point and relevant. We work with you to create a relevant ad with the power of compel your potential clients</div>
+            <div class="text-center c_white fw-bolder fs-4 pt-5">SITE STATS <span class="fw_600 fs-6">( FEB 2019 TO JULY 2019 )</span> </div>
+            <div class="text-center c_white fw_600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, modi soluta quo odio architecto eligendi quia iste.</div>
+            <div class="row py-5 px-1">
+              <div class="col-md-4 bg_white  bg_dark_max">
+                <div class="one text-center bg_purple w-100 h-100 m-1">
+                  <img class="mt-3" src="./assets/Path 1679.png" alt="USERS">
+                  <div class="text-center fw-bolder fs-4 my-3 c_w">USERS 12M+</div>
+                </div>
+              </div>
+              <div class="col-md-4 bg_white  bg_dark_max">
+                <div class="two text-center bg_orng w-100 h-100 m-1">
+                  <img class="mt-3" src="./assets/Group 3672.png" alt="USERS">
+                  <div class="text-center fw-bolder fs-4 my-3 c_w">SESSIONS 23M+</div>
+                </div>
+              </div>
+              <div class="col-md-4 bg_white  bg_dark_max">
+                <div class="two text-center bg_blue w-100 h-100 m-1">
+                  <img class="mt-3 pt-1" src="./assets/Group 3673.png" alt="USERS">
+                  <div class="text-center fw-bolder fs-4 my-4 c_w">PAGE VIEWS 74M+</div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center c_white fw_600 py-2 fs-5 d-flex justify-content-center align-items-center">
+              <div class="line_1 w-25 mx-2"></div>
+              Impress Audience 
+              <div class="line_2 w-25 mx-2"></div>
+            </div>
+            <div class="text-center c_white px-4 mt-3">To impress your customers, you need to fullfill three C's:Clean Ad, Compelling Content & Correct Platform. Ad alone is not enough to cinvince the audience.</div>
+            <div class="text-center c_white fw_600 py-2 mt-3 fs-5 d-flex justify-content-center align-items-center">
+              <div class="line_1 w-25 mx-2"></div>
+              Stay Consistent 
+              <div class="line_2 w-25 mx-2"></div>
+            </div>
+            <div class="text-center c_white px-4 mt-3">The key is consistency! you have created a treffic with a compelling content. Greate now you have to make sure that your advertisement is seen over and over again. so the user do not forget about you. and that's we can help you.</div>
+            <div class="text-center c_white fw-bolder fs-4 pt-5">RATES <span class="fw_600 fs-6">RUN OF SITE(ROS)</span> </div>
+            <div class="table px-4 mt-3">
+              <table class="table border bg_dark_maxi c_white">
+                <thead class="thead">
+                  <tr>
+                    <th scope="col" class="py-3 border">Impressions</th>
+                    <th scope="col" class="py-3 border">Price</th>
+                    <th scope="col" class="py-3 border">Save upto</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1,00,000</td>
+                    <td>
+                      <div class="d-flex justify-content-between">  
+                        <span class="d-block">150$</span> 
+                        <span class="d-block text-danger text-decoration-line-through ml_5"></span>
+                      </div>
+                    </td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2,00,000</td>
+                    <td>
+                      <div class="d-flex justify-content-between">  
+                        <span class="d-block">275$</span> 
+                        <span class="d-block text-danger text-decoration-line-through ml_5">300$</span>
+                      </div>
+                    </td>
+                    <td>13%</td>
+                  </tr>
+                  <tr>
+                    <td>5,00,000</td>
+                    <td>
+                      <div class="d-flex justify-content-between">  
+                        <span class="d-block">600$</span> 
+                        <span class="d-block text-danger text-decoration-line-through ml_5">750$</span>
+                      </div>
+                    </td>
+                    <td>20%</td>
+                  </tr>
+                  <tr>
+                    <td>10,00,000</td>
+                    <td>
+                      <div class="d-flex justify-content-between">  
+                        <span class="d-block">1000$</span> 
+                        <span class="d-block text-danger text-decoration-line-through ml_5">1500$</span>
+                      </div>
+                    </td>
+                    <td>30%</td>
+                  </tr>
+                  <tr>
+                    <td>50,00,000</td>
+                    <td>
+                      <div class="d-flex justify-content-between">  
+                        <span class="d-block">4000$</span> 
+                        <span class="d-block text-danger text-decoration-line-through ml_5">7600$</span>
+                      </div>
+                    </td>
+                    <td>46%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="text-center fw-bolder fs-4 pt-5 c_white">ADS POSITIONS</div>
+            <div class="row">
+              <div class="col-md-3 p-2">
+                <div class="ad h-100 w-100 border py-5"></div>
+              </div>
+              <div class="col-md-3 p-2">
+                <div class="ad h-100 w-100 border"></div>
+              </div>
+              <div class="col-md-3 p-2">
+                <div class="ad h-100 w-100 border"></div>
+              </div>
+              <div class="col-md-3 p-2">
+                <div class="ad h-100 w-100 border"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 p-2">
+                <div class="ad h-100 w-100 border py-5"></div>
+              </div>
+              <div class="col-md-5 p-2">
+                <div class="ad h-100 w-100 border"></div>
+              </div>
+              <div class="col-md-3 p-2">
+                <div class="ad h-100 w-100 border"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 p-2">
+                <div class="ad h-100 w-100 border py-5"></div>
+              </div>
+              <div class="col-md-3 p-2">
+                <div class="ad h-100 w-100 border"></div>
+              </div>
+              <div class="col-md-3 p-2">
+                <div class="ad h-100 w-100 border"></div>
+              </div>
+              <div class="col-md-3 p-2">
+                <div class="ad h-100 w-100 border"></div>
+              </div>
+            </div>
+            <div class="text-center fw-bolder fs-4 pt-5 c_white">ABOUT US</div>
+            <div class="row justify-content-center">
+              <div class="col-md-5 p-4">
+                <div class="bg-primary text-center fw-bolder fs-5 py-3 c_w">Contact Us</div>
+                <div class="border">
+                  <div class="contact d-flex justify-content-between pt-2 c_white">
+                    <img class="h_w mx-3" src="./assets/phonee.png" alt="PHONE">
+                    <p class="d-inline-block fw_600 mx-3">+98-7654543-21234</p>
+                  </div>
+                  <div class="contact d-flex justify-content-between pt-2 c_white">
+                    <img class="h_w mx-3" src="./assets/gmail.png" alt="PHONE">
+                    <p class="d-inline-block fw_600 mx-3">for@example.com</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 p-4">
+                <div class="bg-primary text-center fw-bolder fs-5 py-3 c_w">Follow Us</div>
+                <div class="border">
+                  <div class="contact d-flex justify-content-between pt-2 c_white">
+                    <img class="h_w mx-3" src="./assets/fbbb.png" alt="PHONE">
+                    <p class="d-inline-block fw_600 mx-3">www.facebook.com</p>
+                  </div>
+                  <div class="contact d-flex justify-content-between pt-2 c_white">
+                    <img class="h_w mx-3" src="./assets/twttr.png" alt="PHONE">
+                    <p class="d-inline-block fw_600 mx-3">www.twitter.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fw_600 text-center py-3 bg-dark c_w ltr">Copy right reserved 2022 <img class="copy" src="./copyright.png" alt="COPYRIGHT"></div>
+    </div>
+    <!-- custom tools -->
+    <div class="all_tools bg_light position-absolute top_start p-5 shadow-sm bg_dark_black rounded">
+      <div class="text-center fw_600 position-relative c_white">ALL TOOLS
+        <img class="hw_cross shadow-sm bg_light" onclick="tools_disp()" src="./del_black.svg" alt="del">
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6 my-4">
+          <a class="anchor text-center" href="#">
+          <img class="toolhw" src="all_tools.png" alt="tool"></a>
+          <a class="anchor mb-3 fw_600 text-center mx-2 c_white" href="#">Tool Name</a> 
+        </div>
+        <div class="col-md-6 my-4"> <a class="anchor text-center" href="#">
+          <img class="toolhw" src="all_tools.png" alt="tool"></a>
+          <a class="anchor mb-3 fw_600 text-center mx-2 c_white" href="#">Tool Name</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 my-4"> <a class="anchor text-center" href="#">
+          <img class="toolhw" src="all_tools.png" alt="tool"></a>
+          <a class="anchor mb-3 fw_600 text-center mx-2 c_white" href="#">Tool Name</a>
+        </div>
+        <div class="col-md-6 my-4"> <a class="anchor text-center" href="#">
+          <img class="toolhw" src="all_tools.png" alt="tool"></a>
+          <a class="anchor mb-3 fw_600 text-center mx-2 c_white" href="#">Tool Name</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 my-4"> <a class="anchor text-center" href="#">
+          <img class="toolhw" src="all_tools.png" alt="tool"></a>
+          <a class="anchor mb-3 fw_600 text-center mx-2 c_white" href="#">Tool Name</a>
+        </div>
+        <div class="col-md-6 my-4"> <a class="anchor text-center" href="#">
+          <img class="toolhw" src="all_tools.png" alt="tool"></a>
+          <a class="anchor mb-3 fw_600 text-center mx-2 c_white" href="#">Tool Name</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 my-4"> <a class="anchor text-center" href="#">
+          <img class="toolhw" src="all_tools.png" alt="tool"></a>
+          <a class="anchor mb-3 fw_600 text-center mx-2 c_white" href="#">Tool Name</a>
+        </div>
+        <div class="col-md-6 my-4"> <a class="anchor text-center" href="#">
+          <img class="toolhw" src="./all_tools.png" alt="tool"></a>
+          <a class="anchor mb-3 fw_600 text-center mx-2 c_white" href="#">Tool Name</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      // JQUERY HERE
+      let light;
+      function bg_dark_mode(){
+      light = !light;
+      if(light){
+      $(".bg_dark_black").css({"background" : "#000000"})
+      $(".bg_dark_fluid").css({"background" : "#000000"})
+      $(".bg_dark_nav").css({"background" : "#212121"})
+      $(".bg_light_black").css({"background" : "#121212"})
+      $(".bg_dark_max").css({"background" : "#212121"})
+      $(".bg_dark_maxi").css({"background" : "#424242"})
+      $(".bg_dark_inp").css({"background" : "#424242"})
+      $(".bg_dark_mbl").css({"background" : "#424242"})
+      $(".c_white ").css({"color" : "white"})
+      $(".b_none").css("border" , "none")
+      $('.inp').addClass('your-class');
+      $(".round").css({"left" : "30px","background" : "#EA5050"})
+      $(".moon_img").attr("src" , "https://v1.smallseotools.com/webimages/night_mode.svg")
+      $(".slide").css({"background" : "#424242"})
+      $(".text_chng").text("Dark Mod")
+      
+      }
+      else{
+      $(".bg_dark_mbl").css({"background" : "white"})
+      $(".bg_dark_fluid").css({"background" : "#eff4f9"})
+      $(".bg_dark_nav").css({"background" : "white"})
+      $(".bg_dark_inp").css({"background" : "#eff4f9"})
+      $(".bg_dark_black").css({"background" : "#F6F8FA"})
+      $(".bg_light_black").css({"background" : "#eff4f9"})
+      $(".bg_dark_max").css({"background" : "white"})
+      $(".bg_dark_maxi").css({"background" : "unset"})
+      $('.inp').removeClass('your-class');
+      $(".c_white").css({"color" : "black"})
+      $(".round").css({"left" : "1px","background" : "white"})
+      $(".slide").css({"background" : "rgb(238, 238, 238)"})
+      $(".moon_img").attr("src" , "sun.png")
+      $(".b_none").css("border" , "1px solid black")
+      $(".text_chng").text("Day Mode")
+      }
+      }
+      function tools_disp(){
+      $(".all_tools").css({"top" : "-300%"})
+      }
+      let show;
+      function show_tools(){
+      show = !show;
+      if(show)
+      $(".all_tools").css({"top" : "10%" }) 
+      else
+      $(".all_tools").css({"top" : "-300%" }) 
+      }
+    </script>
+  </body>
+</html>
